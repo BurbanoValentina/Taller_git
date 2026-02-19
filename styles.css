@@ -1,0 +1,80 @@
+:root{
+    --base-color: white;
+    --base-variant: #e8e9ed;
+    --text-color: #111528;
+    --secondary-text: #232738;
+    --primary-color: #3a435d;
+    --accent-color: #0071ff;
+}
+.darkmode{
+   --base-color: #070b1d;
+    --base-variant: #101425;
+    --text-color: #ffffff;
+    --secondary-text: #d1d1e0;
+    --primary-color: #ffffff;
+    --accent-color: #0071ff;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    min-height: 100vh;
+    background-color: var(--base-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+h1, h2, h3, p, span, li{
+    color: var(--primary-color);
+}
+a{
+    color: var(--text-color);
+}
+#theme-switch{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--base-variant);
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+#theme-switch svg{
+    fill: var(--primary-color);
+}
+#theme-switch svg:last-child{
+    display: none;
+}
+.darkmode #theme-switch svg:last-child{
+    display: block;
+}
+.darkmode #theme-switch svg:first-child{
+    display: none;
+}
+.img-capibara{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border: 4px solid var(--accent-color);
+}
+.custom-card{
+    width: 600px;
+    border-radius: 20px;
+    background-color: var(--base-variant);
+    transition: 0.3s ease;
+
+}
+.custom-card:hover{
+    transform: translateY(-5px);
+}
+#dos{
+    border-radius: 20px;
+    padding: 6px 20px;
+}
